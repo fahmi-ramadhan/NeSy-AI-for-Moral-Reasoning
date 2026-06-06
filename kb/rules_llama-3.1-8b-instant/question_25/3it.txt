@@ -1,0 +1,11 @@
+promotes_overall_wellbeing(X) :- fulfils_needs(X). = 1.0
+promotes_overall_wellbeing(X) :- satisfies_preferences(X). = 1.0
+promotes_overall_wellbeing(X) :- maximizes_happiness(X). = 1.0
+counts_welfare_equally(X) :- sets_aside_partiality(X). = 1.0
+produces_greatest_net_good(X) :- promotes_overall_wellbeing(X), counts_welfare_equally(X). = 1.0
+justified_act_utilitarian(X) :- produces_greatest_net_good(X). = 1.0
+prioritizes_public_safety(X) :- prioritizes_over_corporate_interests(X). = 1.0
+prioritizes_over_corporate_interests(X) :- promotes_overall_wellbeing(X). = 1.0
+results_in_delay(option_a). = 1.0
+has_immediate_recall(option_b). = 1.0
+immediate_recall_prevents_deaths(option_b). = 1.0

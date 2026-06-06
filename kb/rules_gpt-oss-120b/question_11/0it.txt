@@ -1,0 +1,9 @@
+each_party_gains_from_cooperation(X) :- maximizes_personal_gain_within_constraints(X). = 1.0
+rational_to_comply(X) :- better_than_non_cooperation(X). = 1.0
+provides_mutual_advantage(X) :- each_party_gains_from_cooperation(X). = 1.0
+rational_bargainers_would_agree(X) :- provides_mutual_advantage(X), rational_to_comply(X). = 1.0
+justified_contractarian(X) :- rational_bargainers_would_agree(X). = 1.0
+rational_agent_accepts_rule(X) :- provides_net_advantage(X). = 1.0
+provides_net_advantage(X) :- expected_gains_higher_than_losses(X). = 1.0
+expected_gains_higher_than_losses(X) :- not_high_risk_of_loss_without_compensation(X). = 1.0
+achieves_professional_goals_without_involvement(alex). = 1.0

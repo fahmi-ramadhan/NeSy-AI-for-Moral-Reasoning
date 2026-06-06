@@ -1,0 +1,11 @@
+pandas
+anthropic
+openai
+tqdm
+numpy
+datasets
+google-genai
+tenacity
+gensim
+scipy
+python-dotenv

@@ -1,0 +1,17 @@
+each_party_gains_from_cooperation(X) :- maximizes_personal_gain_within_constraints(X). = 1.0
+rational_to_comply(X) :- better_than_non_cooperation(X). = 1.0
+provides_mutual_advantage(X) :- each_party_gains_from_cooperation(X). = 1.0
+rational_bargainers_would_agree(X) :- provides_mutual_advantage(X), rational_to_comply(X). = 1.0
+justified_contractarian(X) :- rational_bargainers_would_agree(X). = 1.0
+provides_significant_benefit_to_all_parties(X) :- eliminates_hiring_bias_completely(X). = 1.0
+provides_partial_reduction_of_hiring_bias(option_b). = 1.0
+provides_partial_reduction_of_hiring_bias(option_b) :- reduces_bias_by_40_percent(option_b). = 1.0
+reduces_bias_by_40_percent(option_b) :- has_80_percent_chance(option_b). = 1.0
+eliminates_hiring_bias_completely(option_a). = 1.0
+eliminates_hiring_bias_completely(option_a) :- has_25_percent_chance(option_a). = 1.0
+prioritizes_greater_benefit(X) :- provides_greater_benefit_to_all_parties(X). = 1.0
+provides_greater_benefit_to_all_parties(X) :- provides_significant_benefit_to_all_parties(X). = 1.0
+provides_mutual_advantage_to_all_parties(option_a). = 1.0
+provides_mutual_advantage_to_all_parties(option_a) :- endorsed_by_civil_rights_organizations(option_a). = 1.0
+endorsed_by_civil_rights_organizations(option_a). = 1.0
+complies_with_rational_agent_rules(X) :- prioritizes_greater_benefit(X). = 1.0

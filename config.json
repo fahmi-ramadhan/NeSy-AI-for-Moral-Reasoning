@@ -1,0 +1,15 @@
+{
+    "PROVIDER": "vertex-gpt-oss",
+    "DATA_FILE": "morebench_theory_filtered.csv",
+    "MAX_ITERATIONS": 5,
+    "CHAT_ENGINE": "openai/gpt-oss-120b-maas",
+    "IS_REASONING_MODEL": true,
+    "BUDGET_TOKENS": 9000,
+    "ENTITY_TNORM": "prod",
+    "PREDICATE_TNORM": "prod",
+    "MIN_DEPTH": "0",
+    "MIN_BS_SIZE": "0",
+    "LAMBDA_CUT": "0.13",
+    "MAX_DEPTH": "13",
+    "GENERATIONS_DIR": "generations_theory"
+}

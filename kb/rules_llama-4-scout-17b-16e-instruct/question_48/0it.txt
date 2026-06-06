@@ -1,0 +1,16 @@
+each_party_gains_from_cooperation(X) :- maximizes_personal_gain_within_constraints(X). = 1.0
+rational_to_comply(X) :- better_than_non_cooperation(X). = 1.0
+rational_bargainers_would_agree(X) :- provides_mutual_advantage(X), rational_to_comply(X). = 1.0
+justified_contractarian(X) :- rational_bargainers_would_agree(X). = 1.0
+moral_obligation_gauthier(X) :- provides_mutual_advantage(X). = 1.0
+provides_mutual_advantage(option_a). = 1.0
+prevents_extinction(option_a). = 1.0
+prevents_significant_carbon_emissions(option_b). = 1.0
+fulfills_commitment(option_a). = 1.0
+increases_trust_and_cooperation(option_a). = 1.0
+aligns_with_governor_priorities(option_b). = 1.0
+undermines_public_support(option_a). = 1.0
+prioritizes_mutual_advantage_and_benefits(X) :- provides_mutual_advantage(X). = 1.0
+provides_long_term_benefit(option_a). = 1.0
+chance_of_preventing_extinction_35_percent(option_a). = 1.0
+chance_of_preventing_significant_carbon_emissions_80_percent(option_b). = 1.0

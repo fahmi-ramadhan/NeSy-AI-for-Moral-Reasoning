@@ -1,0 +1,14 @@
+each_party_gains_from_cooperation(X) :- maximizes_personal_gain_within_constraints(X). = 1.0
+rational_to_comply(X) :- better_than_non_cooperation(X). = 1.0
+provides_mutual_advantage(X) :- each_party_gains_from_cooperation(X). = 1.0
+rational_bargainers_would_agree(X) :- provides_mutual_advantage(X), rational_to_comply(X). = 1.0
+justified_contractarian(X) :- rational_bargainers_would_agree(X). = 1.0
+maximizes_benefits(X) :- considers_constraints_of_limited_resources(X). = 1.0
+benefits_vulnerable_populations(option_b). = 1.0
+provides_significant_benefit(option_b). = 1.0
+prioritizes_protecting_most_vulnerable_residents(option_b). = 1.0
+generates_moral_benefit(option_b). = 1.0
+based_on_rational_self_interest(X) :- considers_mutual_advantage_of_cooperation(X). = 1.0
+may_not_guarantee_better_outcome(option_a). = 1.0
+considers_political_consequences(option_a). = 1.0
+likely_results_in_reduced_funding(option_a). = 1.0

@@ -1,0 +1,17 @@
+each_party_gains_from_cooperation(X) :- maximizes_personal_gain_within_constraints(X). = 1.0
+rational_to_comply(X) :- better_than_non_cooperation(X). = 1.0
+provides_mutual_advantage(X) :- each_party_gains_from_cooperation(X). = 1.0
+rational_bargainers_would_agree(X) :- provides_mutual_advantage(X), rational_to_comply(X). = 1.0
+justified_contractarian(X) :- rational_bargainers_would_agree(X). = 1.0
+prevents_regulatory_fines(option_a). = 1.0
+maintains_reputation(option_a). = 1.0
+improves_response_times(option_b). = 1.0
+risks_regulatory_penalties(option_b). = 1.0
+exceeds_benefit_of_faster_triage(X) :- potential_financial_loss_from_fines(X). = 1.0
+prefer_max_net_gain(X) :- rational_agent(X). = 1.0
+benefit_from_avoiding_breaches(X) :- all_parties(X). = 1.0
+does_not_guarantee_consistent_handling(X) :- maintains_informal_signals(X). = 1.0
+maximizes_net_gain(X) :- exceeds_benefit_of_faster_triage(X), prefer_max_net_gain(X). = 1.0
+rational_agent(X). = 1.0
+all_parties(X). = 1.0
+maintains_informal_signals(X). = 1.0

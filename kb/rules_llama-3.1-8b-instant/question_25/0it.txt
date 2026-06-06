@@ -1,0 +1,15 @@
+promotes_overall_wellbeing(X) :- fulfils_needs(X). = 1.0
+promotes_overall_wellbeing(X) :- satisfies_preferences(X). = 1.0
+promotes_overall_wellbeing(X) :- maximizes_happiness(X). = 1.0
+counts_welfare_equally(X) :- sets_aside_partiality(X). = 1.0
+produces_greatest_net_good(X) :- promotes_overall_wellbeing(X), counts_welfare_equally(X). = 1.0
+justified_act_utilitarian(X) :- produces_greatest_net_good(X). = 1.0
+prioritizes_public_safety(X) :- prevents_deaths_and_injuries(X). = 1.0
+prevents_deaths_and_injuries(option_b). = 1.0
+morally_justifiable(X) :- prioritizes_public_safety(X). = 1.0
+enables_preventable_deaths(corporate_loyalty_structures). = 1.0
+supersedes_moral_obligation(Dr_Sarah_Chen_request). = 1.0
+avoids_negative_publicity(option_a). = 1.0
+aligns_with_act_utilitarianism(option_b). = 1.0
+prioritizes_overall_wellbeing(X) :- well_being_of_all_individuals_affected(X). = 1.0
+well_being_of_all_individuals_affected(option_b). = 1.0

@@ -1,0 +1,17 @@
+promotes_overall_wellbeing(X) :- fulfils_needs(X). = 1.0
+promotes_overall_wellbeing(X) :- satisfies_preferences(X). = 1.0
+promotes_overall_wellbeing(X) :- maximizes_happiness(X). = 1.0
+counts_welfare_equally(X) :- sets_aside_partiality(X). = 1.0
+produces_greatest_net_good(X) :- promotes_overall_wellbeing(X), counts_welfare_equally(X). = 1.0
+justified_act_utilitarian(X) :- produces_greatest_net_good(X). = 1.0
+eliminates_hiring_bias(option_a). = 1.0
+partially_reduces_bias(option_b). = 1.0
+reduces_bias_by_40_percent(option_b). = 1.0
+endorsed_by_civil_rights_organizations(option_a). = 1.0
+favors_publicly_defensible_solution(option_b). = 1.0
+negatively_impacts_hiring_success_rate(option_a). = 1.0
+maximizes_net_good_for_all(X) :- minimizes_systemic_discrimination(X). = 1.0
+minimizes_systemic_discrimination(X) :- completely_eliminates_hiring_bias(X). = 1.0
+maintains_candidate_diversity_and_business_efficiency(option_b). = 1.0
+provides_short_term_public_relations_benefits(option_b). = 1.0
+potentially_harms_equity_and_fairness(option_b). = 1.0

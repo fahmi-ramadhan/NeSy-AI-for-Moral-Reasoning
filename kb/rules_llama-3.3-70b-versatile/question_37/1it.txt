@@ -1,0 +1,16 @@
+promotes_overall_wellbeing(X) :- fulfils_needs(X). = 1.0
+promotes_overall_wellbeing(X) :- satisfies_preferences(X). = 1.0
+promotes_overall_wellbeing(X) :- maximizes_happiness(X). = 1.0
+counts_welfare_equally(X) :- sets_aside_partiality(X). = 1.0
+produces_greatest_net_good(X) :- promotes_overall_wellbeing(X), counts_welfare_equally(X). = 1.0
+justified_act_utilitarian(X) :- produces_greatest_net_good(X). = 1.0
+promotes_overall_wellbeing(X) :- saves_local_jobs(X). = 1.0
+saves_local_jobs(option_a). = 1.0
+supports_minority_owned_businesses(option_a). = 1.0
+provides_moderate_risk_home_mortgages(option_b). = 1.0
+generates_revenue_with_lower_default_probability(option_b). = 1.0
+tied_to_local_economy(X) :- saves_local_jobs(X), supports_minority_owned_businesses(X). = 1.0
+contributes_to_net_balance_of_good(option_a) :- saves_local_jobs(option_a), supports_minority_owned_businesses(option_a). = 1.0
+outweighed_by_positive_consequences(option_a) :- contributes_to_net_balance_of_good(option_a), higher_default_probability(option_a, 0.4). = 1.0
+maximizes_long_term_wellbeing(X) :- saves_local_jobs(X), supports_minority_owned_businesses(X). = 1.0
+consistent_with_act_utilitarianism(option_a) :- promotes_overall_wellbeing(option_a), contributes_to_net_balance_of_good(option_a). = 1.0

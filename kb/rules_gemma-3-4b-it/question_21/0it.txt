@@ -1,0 +1,14 @@
+promotes_overall_wellbeing(X) :- fulfils_needs(X). = 1.0
+promotes_overall_wellbeing(X) :- satisfies_preferences(X). = 1.0
+promotes_overall_wellbeing(X) :- maximizes_happiness(X). = 1.0
+counts_welfare_equally(X) :- sets_aside_partiality(X). = 1.0
+produces_greatest_net_good(X) :- promotes_overall_wellbeing(X), counts_welfare_equally(X). = 1.0
+justified_act_utilitarian(X) :- produces_greatest_net_good(X). = 1.0
+maximizes_overall_wellbeing(X) :- promotes_initial_enthusiasm(X), better_understanding_of_foundational_concepts(X). = 1.0
+promotes_initial_enthusiasm(X) :- increases_student_engagement(X). = 1.0
+better_understanding_of_foundational_concepts(X) :- improves_test_scores(X). = 1.0
+increases_student_engagement(option_b). = 1.0
+improves_test_scores(option_b). = 1.0
+introduces_subtle_misconceptions(option_b). = 1.0
+students_expressed_gratitude(option_b). = 1.0
+administration_considers_expansion(option_b). = 1.0

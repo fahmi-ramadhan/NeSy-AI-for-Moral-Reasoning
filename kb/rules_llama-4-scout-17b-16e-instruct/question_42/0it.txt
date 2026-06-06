@@ -1,0 +1,15 @@
+each_party_gains_from_cooperation(X) :- maximizes_personal_gain_within_constraints(X). = 1.0
+rational_to_comply(X) :- better_than_non_cooperation(X). = 1.0
+provides_mutual_advantage(X) :- each_party_gains_from_cooperation(X). = 1.0
+rational_bargainers_would_agree(X) :- provides_mutual_advantage(X), rational_to_comply(X). = 1.0
+justified_contractarian(X) :- rational_bargainers_would_agree(X). = 1.0
+prioritizes_benefits(X) :- maximizes_benefits(X), minimizes_harm(X). = 1.0
+rational_agent_prioritizes(X) :- prioritizes_benefits(X). = 1.0
+requires_hiring_new_counselors(option_b). = 1.0
+balances_immediate_needs(X) :- considers_short_term_consequences(X), considers_long_term_consequences(X). = 1.0
+considers_staff_morale(option_b). = 1.0
+considers_student_teacher_relationships(option_b). = 1.0
+prioritizes_staff_retention_over_long_term_benefits(X) :- prioritizes_immediate_staff_retention(X). = 1.0
+rational_agents_agree_on(X) :- considers_overall_wellbeing(X). = 1.0
+considers_overall_wellbeing(X) :- considers_staff_wellbeing(X), considers_student_wellbeing(X). = 1.0
+balances_immediate_needs_and_long_term_benefits(X) :- balances_short_term_and_long_term_consequences(X). = 1.0

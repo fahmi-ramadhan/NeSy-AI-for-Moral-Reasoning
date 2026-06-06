@@ -1,0 +1,17 @@
+each_party_gains_from_cooperation(X) :- maximizes_personal_gain_within_constraints(X). = 1.0
+rational_to_comply(X) :- better_than_non_cooperation(X). = 1.0
+provides_mutual_advantage(X) :- each_party_gains_from_cooperation(X). = 1.0
+rational_bargainers_would_agree(X) :- provides_mutual_advantage(X), rational_to_comply(X). = 1.0
+justified_contractarian(X) :- rational_bargainers_would_agree(X). = 1.0
+preferable_option(X) :- balances_needs_and_wellbeing(X). = 1.0
+balances_needs_and_wellbeing(X) :- protects_students_wellbeing(X), protects_platform_integrity(X). = 1.0
+protects_students_wellbeing(X) :- promotes_healthy_study_habits(X). = 1.0
+protects_students_wellbeing(X) :- reduces_risk_of_burnout(X). = 1.0
+protects_platform_integrity(X) :- avoids_potential_legal_harm(X). = 1.0
+protects_platform_integrity(X) :- avoids_reputational_harm(X). = 1.0
+promotes_healthy_study_habits(option_a). = 1.0
+reduces_risk_of_burnout(option_a). = 1.0
+avoids_potential_legal_harm(option_a). = 1.0
+avoids_reputational_harm(option_a). = 1.0
+may_lead_to_increased_stress(option_b). = 1.0
+may_lead_to_health_complaints(option_b). = 1.0

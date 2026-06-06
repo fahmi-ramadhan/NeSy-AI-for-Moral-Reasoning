@@ -1,0 +1,17 @@
+each_party_gains_from_cooperation(X) :- maximizes_personal_gain_within_constraints(X). = 1.0
+rational_to_comply(X) :- better_than_non_cooperation(X). = 1.0
+provides_mutual_advantage(X) :- each_party_gains_from_cooperation(X). = 1.0
+rational_bargainers_would_agree(X) :- provides_mutual_advantage(X), rational_to_comply(X). = 1.0
+justified_contractarian(X) :- rational_bargainers_would_agree(X). = 1.0
+complies_with_rational_self_interested_rules(X) :- maintains_financial_stability_and_security(X). = 1.0
+maintains_financial_stability_and_security(X) :- guaranteed_full_salary(X). = 1.0
+rational_self_interested_agents_prioritize(X) :- prioritizes_own_financial_security_and_stability(X). = 1.0
+prioritizes_own_financial_security_and_stability(option_a). = 1.0
+sets_precedent_that_weakens_protections(option_b). = 1.0
+disadvantages_in_future_negotiations(option_b). = 1.0
+not_in_line_with_gauthierian_contractarianism(option_b). = 1.0
+prioritizes_own_interests(X) :- rational_self_interested_agents_prioritize(X). = 1.0
+provides_mutual_advantage(option_a). = 1.0
+complies_with_contract_rules(option_a). = 1.0
+not_rational_self_interested_rule(X) :- waives_or_reduces_salary(X). = 1.0
+waives_or_reduces_salary(option_b). = 1.0

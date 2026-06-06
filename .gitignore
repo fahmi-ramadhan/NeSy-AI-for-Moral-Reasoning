@@ -1,0 +1,22 @@
+# Command files containing API keys and sensitive information
+command
+command*
+
+
+# API keys and credentials
+*.env
+.env
+
+# OS generated files
+.DS_Store
+.DS_Store?
+
+# pycache
+__pycache__/
+*.pyc
+prompts/__pycache__/
+prompts/*.pyc
+
+# kb 
+kb/prolog_kb/*
+kb/rules/*
