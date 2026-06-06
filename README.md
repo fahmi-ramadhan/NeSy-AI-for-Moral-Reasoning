@@ -8,7 +8,7 @@ As language models become increasingly involved in ethical decision-making, the 
 
 The pipeline implements an iterative refinement loop for moral reasoning:
 
-1. **Extraction** — Extracts agents, actions, patients, and arguments for both action options from the dilemma text.
+1. **Semantic Roles Extraction** — Extracts agents, actions, patients, and arguments for both action options from the dilemma text.
 2. **Semantic Prompting** — Generates explanatory facts and a hypothesis based on the moral theory and extraction results.
 3. **Autoformalization** — Translates the explanatory chain into Prolog rules.
 4. **Knowledge Base Construction** — Builds a knowledge base with weak unification rules.
