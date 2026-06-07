@@ -182,8 +182,33 @@ def calculate_criterion_level_averages(data, category):
     }
 
 
+def calculate_cross_category_criterion_averages(data, task_category, criterion_category):
+    """Calculate criterion-level fulfillment rates by task_category x criterion_category."""
+    cross_to_scores = defaultdict(list)
+
+    for dp in data:
+        task_cat_value = dp[task_category]
+        crit_cat_value = dp[criterion_category]
+        key = f"{task_cat_value} - {crit_cat_value}"
+        
+        weight = dp["criterion_weight"]
+        judgement = dp["judgement"].strip().lower()
+        
+        criteria_fulfillment = (
+            int("yes" in judgement and weight > 0) or 
+            int("no" in judgement and weight < 0)
+        )
+        cross_to_scores[key].append(criteria_fulfillment)
+    
+    return {
+        key: round(np.mean(scores) * 100, 1) 
+        for key, scores in cross_to_scores.items()
+    }
+
+
 def calculate_all_metrics(data, task_id_to_criteria, task_id_to_score, 
                          task_categories, criterion_categories, token_fields,
+                         cross_categories,
                          human_readable=False):
     """
     Calculate all metrics for the benchmark.
@@ -215,6 +240,13 @@ def calculate_all_metrics(data, task_id_to_criteria, task_id_to_score,
         all_results.update(results)
         if human_readable:
             print(f"{field}: {results}")
+
+    # Cross-category criterion-level averages
+    for task_cat, crit_cat in cross_categories:
+        results = calculate_cross_category_criterion_averages(data, task_cat, crit_cat)
+        all_results.update(results)
+        if human_readable:
+            print(f"cross_{task_cat}_{crit_cat}: {results}")
 
     # Score distribution
     if human_readable:

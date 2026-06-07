@@ -37,6 +37,7 @@ if args.pipeline_results:
 TASK_CATEGORIES = [None, "theory", "dilemma_source"]
 CRITERION_CATEGORIES = ["criterion_dimension", "criterion_weight"]
 TOKEN_FIELDS = ["input_tokens", "output_tokens", "len"]
+CROSS_CATEGORIES = [("theory", "criterion_dimension")]
 
 # Calculate all metrics
 all_results = calculate_all_metrics(
@@ -46,6 +47,7 @@ all_results = calculate_all_metrics(
     task_categories=TASK_CATEGORIES,
     criterion_categories=CRITERION_CATEGORIES,
     token_fields=TOKEN_FIELDS,
+    cross_categories=CROSS_CATEGORIES,
     human_readable=(args.format == "human")
 )
 
